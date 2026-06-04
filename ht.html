@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learning Platform UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#faf5ef;
+    color:#5c4033;
+}
+
+/* Navigation */
+nav{
+    background:#d8c3a5;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#4a3428;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#8b6b4d;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#efe2d0;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* Sections */
+section{
+    padding:60px 8%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Courses */
+.course-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card button{
+    margin-top:15px;
+    padding:10px 15px;
+    border:none;
+    background:#c8ad7f;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Video */
+.video-section{
+    text-align:center;
+}
+
+iframe{
+    width:80%;
+    max-width:800px;
+    height:450px;
+    border:none;
+    border-radius:10px;
+}
+
+/* Progress */
+.progress-card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+.progress-bar{
+    width:100%;
+    background:#e8d9c5;
+    height:30px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.progress-fill{
+    height:100%;
+    text-align:center;
+    color:white;
+    line-height:30px;
+}
+
+.html{
+    width:85%;
+    background:#b08968;
+}
+
+.python{
+    width:70%;
+    background:#a98467;
+}
+
+.ml{
+    width:55%;
+    background:#8d6e63;
+}
+
+/* Footer */
+footer{
+    background:#d8c3a5;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    iframe{
+        width:100%;
+        height:250px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">LearnHub</div>
+
+    <ul>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#progress">Progress</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>E-Learning Platform</h1>
+    <p>Learn New Skills Anytime, Anywhere</p>
+</section>
+
+<!-- Course Listing -->
+<section id="courses">
+    <h2>Popular Courses</h2>
+
+    <div class="course-container">
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript from scratch.</p>
+            <button>Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Python Programming</h3>
+            <p>Master Python for projects and automation.</p>
+            <button>Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Machine Learning</h3>
+            <p>Introduction to AI and Machine Learning.</p>
+            <button>Enroll Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Video Section -->
+<section id="video" class="video-section">
+    <h2>Course Preview</h2>
+
+    <iframe
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<!-- Progress Tracking -->
+<section id="progress">
+    <h2>Learning Progress</h2>
+
+    <div class="progress-card">
+        <h3>Web Development</h3>
+        <div class="progress-bar">
+            <div class="progress-fill html">85%</div>
+        </div>
+    </div>
+
+    <div class="progress-card">
+        <h3>Python Programming</h3>
+        <div class="progress-bar">
+            <div class="progress-fill python">70%</div>
+        </div>
+    </div>
+
+    <div class="progress-card">
+        <h3>Machine Learning</h3>
+        <div class="progress-bar">
+            <div class="progress-fill ml">55%</div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 LearnHub | E-Learning Platform UI</p>
+</footer>
+
+</body>
+</html>
